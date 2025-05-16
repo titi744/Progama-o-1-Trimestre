@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes Urbanas e Rurais</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .art-container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(to bottom, #87CEEB 40%, #f5f5f5 40%);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Elementos rurais */
+        .tree {
+            position: absolute;
+            bottom: 40%;
+            left: 100px;
+        }
+        
+        .trunk {
+            width: 30px;
+            height: 80px;
+            background: linear-gradient(to right, #8B4513, #A0522D);
+            margin: 0 auto;
+        }
+        
+        .foliage {
+            width: 100px;
+            height: 80px;
+            background: #228B22;
+            border-radius: 50%;
+            margin-left: -35px;
+            margin-bottom: 10px;
+        }
+        
+        .roots {
+            position: absolute;
+            bottom: 40%;
+            left: 85px;
+            width: 60px;
+            height: 100px;
+        }
+        
+        .root {
+            position: absolute;
+            background: #8B4513;
+            border-radius: 5px;
+        }
+        
+        .root1 {
+            width: 40px;
+            height: 8px;
+            transform: rotate(30deg);
+            bottom: -20px;
+            left: 10px;
+        }
+        
+        .root2 {
+            width: 30px;
+            height: 8px;
+            transform: rotate(-20deg);
+            bottom: -40px;
+            left: 15px;
+        }
+        
+        .root3 {
+            width: 25px;
+            height: 8px;
+            transform: rotate(10deg);
+            bottom: -60px;
+            left: 5px;
+        }
+        
+        .field {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to bottom, #4CAF50, #2E8B57);
+        }
+        
+        /* Elementos urbanos */
+        .buildings {
+            position: absolute;
+            bottom: 40%;
+            right: 50px;
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .building {
+            background: linear-gradient(to bottom, #555, #333);
+            margin-right: 15px;
+            position: relative;
+        }
+        
+        .building1 {
+            width: 40px;
+            height: 120px;
+        }
+        
+        .building2 {
+            width: 60px;
+            height: 150px;
+        }
+        
+        .building3 {
+            width: 50px;
+            height: 100px;
+        }
+        
+        .window {
+            position: absolute;
+            background: #FFD700;
+            width: 8px;
+            height: 8px;
+        }
+        
+        .urban-roots {
+            position: absolute;
+            bottom: 40%;
+            right: 45px;
+            width: 120px;
+            height: 100px;
+        }
+        
+        .urban-root {
+            position: absolute;
+            background: #555;
+            border-radius: 3px;
+        }
+        
+        .urban-root1 {
+            width: 50px;
+            height: 6px;
+            transform: rotate(-15deg);
+            bottom: -20px;
+            right: 30px;
+        }
+        
+        .urban-root2 {
+            width: 40px;
+            height: 6px;
+            transform: rotate(25deg);
+            bottom: -40px;
+            right: 40px;
+        }
+        
+        .urban-root3 {
+            width: 60px;
+            height: 6px;
+            transform: rotate(-5deg);
+            bottom: -60px;
+            right: 20px;
+        }
+        
+        /* Conexão entre as raízes */
+        .connection {
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            width: 100%;
+            height: 20px;
+        }
+        
+        .connection-line {
+            position: absolute;
+            height: 3px;
+            background: #8B4513;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .connection-dots {
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            bottom: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #8B4513;
+            border-radius: 50%;
+        }
+        
+        /* Título */
+        .title {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="art-container">
+        <div class="title">Raízes Urbanas e Rurais</div>
+        
+        <!-- Lado rural -->
+        <div class="tree">
+            <div class="foliage"></div>
+            <div class="trunk"></div>
+        </div>
+        
+        <div class="roots">
+            <div class="root root1"></div>
+            <div class="root root2"></div>
+            <div class="root root3"></div>
+        </div>
+        
+        <div class="field"></div>
+        
+        <!-- Lado urbano -->
+        <div class="buildings">
+            <div class="building building1">
+                <div class="window" style="left: 5px; top: 20px;"></div>
+                <div class="window" style="right: 5px; top: 20px;"></div>
+                <div class="window" style="left: 5px; top: 50px;"></div>
+                <div class="window" style="right: 5px; top: 50px;"></div>
+                <div class="window" style="left: 5px; top: 80px;"></div>
+                <div class="window" style="right: 5px; top: 80px;"></div>
+            </div>
+            <div class="building building2">
+                <div class="window" style="left: 10px; top: 30px;"></div>
+                <div class="window" style="right: 10px; top: 30px;"></div>
+                <div class="window" style="left: 10px; top: 60px;"></div>
+                <div class="window" style="right: 10px; top: 60px;"></div>
+                <div class="window" style="left: 10px; top: 90px;"></div>
+                <div class="window" style="right: 10px; top: 90px;"></div>
+                <div class="window" style="left: 10px; top: 120px;"></div>
+                <div class="window" style="right: 10px; top: 120px;"></div>
+            </div>
+            <div class="building building3">
+                <div class="window" style="left: 8px; top: 25px;"></div>
+                <div class="window" style="right: 8px; top: 25px;"></div>
+                <div class="window" style="left: 8px; top: 55px;"></div>
+                <div class="window" style="right: 8px; top: 55px;"></div>
+                <div class="window" style="left: 8px; top: 85px;"></div>
+                <div class="window" style="right: 8px; top: 85px;"></div>
+            </div>
+        </div>
+        
+        <div class="urban-roots">
+            <div class="urban-root urban-root1"></div>
+            <div class="urban-root urban-root2"></div>
+            <div class="urban-root urban-root3"></div>
+        </div>
+        
+        <!-- Conexão entre as raízes -->
+        <div class="connection">
+            <div class="connection-line"></div>
+            <div class="connection-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
